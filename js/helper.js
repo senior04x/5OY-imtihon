@@ -1,3 +1,3 @@
 export function findElement(selector, context = document) {
-    return context.querySelector(selector);
-  }
+  return context.querySelector(selector);
+}

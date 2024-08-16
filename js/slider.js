@@ -1,39 +1,34 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-
 const swiper = new Swiper(".swiper", {
-    loop: true,
-    effect: 'slide',
-    slidesPerView: 4,
-    spaceBetween: 5,
+  loop: true,
+  effect: "slide",
+  slidesPerView: 4,
+  spaceBetween: 5,
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true, 
-    },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
- 
-
- 
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 async function fetchProducts() {
-    const products = JSON.parse(localStorage.getItem('products')) || [];
+  const products = JSON.parse(localStorage.getItem("products")) || [];
 
-    const swiperWrapper = document.querySelector('.swiper-wrapper');
+  const swiperWrapper = document.querySelector(".swiper-wrapper");
 
-    swiperWrapper.innerHTML = '';
+  swiperWrapper.innerHTML = "";
 
-    products.forEach(product => {
-        const slide = document.createElement('div');
-        slide.classList.add('swiper-slide');
-        
-        slide.innerHTML = `
+  products.forEach((product) => {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
+
+    slide.innerHTML = `
         <div class="content__list_block">
         <div class="content__img_box">
           <a href="./single.html">
@@ -72,13 +67,11 @@ async function fetchProducts() {
         </div>
       </div>
         `;
-        
-        swiperWrapper.appendChild(slide);
-    });
 
-    
-    swiper.update();
+    swiperWrapper.appendChild(slide);
+  });
+
+  swiper.update();
 }
 
-
-document.addEventListener('DOMContentLoaded', fetchProducts);
+document.addEventListener("DOMContentLoaded", fetchProducts);
