@@ -4,24 +4,24 @@ function findElement(selector) {
 
 function addToBasket(productId) {
   const products = JSON.parse(localStorage.getItem("products")) || [];
-  const productIndex = products.findIndex((item) => item.id === productId);
+  const productIndex = products.findIndex(item => item.id === productId);
 
   if (productIndex !== -1) {
     products[productIndex].addBasket = true;
     localStorage.setItem("products", JSON.stringify(products));
-    alert("добавить в корзину");
+    alert('Added to basket');
     displayBasket();
   }
 }
 
 function removeFromBasket(productId) {
   const products = JSON.parse(localStorage.getItem("products")) || [];
-  const productIndex = products.findIndex((item) => item.id === productId);
+  const productIndex = products.findIndex(item => item.id === productId);
 
   if (productIndex !== -1) {
     products[productIndex].addBasket = false;
     localStorage.setItem("products", JSON.stringify(products));
-    alert("удалить из корзины");
+    alert('Removed from basket');
     displayBasket();
   }
 }
@@ -33,12 +33,11 @@ function updateTotalPrice(quantity, price, totalPriceElement) {
 
 function displayBasket() {
   const products = JSON.parse(localStorage.getItem("products")) || [];
-  const basketItems = products.filter((item) => item.addBasket);
+  const basketItems = products.filter(item => item.addBasket);
 
   const basketContainer = findElement("#basket-items");
   basketContainer.innerHTML = basketItems
-    .map(
-      (product) => `
+ .map(product => `
       <div class="basket__card_box container">
         <div class="title__basket_box">
           <h2 class="basket__title">Basket</h2>
@@ -70,50 +69,36 @@ function displayBasket() {
           <button class="booking__btn2">Продолжить покупки</button>
         </div>
       </div>
-    `
-    )
-    .join("");
+    `).join("");
 
-  document.querySelectorAll(".remove-from-basket").forEach((button) => {
-    button.addEventListener("click", (e) => {
+  document.querySelectorAll(".remove-from-basket").forEach(button => {
+    button.addEventListener("click", e => {
       const productId = +e.target.getAttribute("data-id");
       removeFromBasket(productId);
     });
   });
 
-  document.querySelectorAll(".miqdor__box").forEach((box) => {
-    const minusButton = box.querySelector(".minus__button");
-    const plusButton = box.querySelector(".plus__button");
-    const quantityInput = box.querySelector(".miqdor__input");
-    const productPriceElement = box
-      .closest(".basket__product_box")
-      .querySelector(".basket__product_price");
-    const totalPriceElement = box
-      .closest(".basket__card_box")
-      .querySelector(".product__finely_price");
+  document.querySelectorAll('.miqdor__box').forEach(box => {
+    const minusButton = box.querySelector('.minus__button');
+    const plusButton = box.querySelector('.plus__button');
+    const quantityInput = box.querySelector('.miqdor__input');
+    const productPriceElement = box.closest('.basket__product_box').querySelector('.basket__product_price');
+    const totalPriceElement = box.closest('.basket__card_box').querySelector('.product__finely_price');
 
-    minusButton.addEventListener("click", () => {
+    minusButton.addEventListener('click', () => {
       let quantity = parseInt(quantityInput.value, 10);
       if (quantity > 1) {
         quantity--;
         quantityInput.value = quantity;
-        updateTotalPrice(
-          quantity,
-          productPriceElement.textContent,
-          totalPriceElement
-        );
+        updateTotalPrice(quantity, productPriceElement.textContent, totalPriceElement);
       }
     });
 
-    plusButton.addEventListener("click", () => {
+    plusButton.addEventListener('click', () => {
       let quantity = parseInt(quantityInput.value, 10);
       quantity++;
       quantityInput.value = quantity;
-      updateTotalPrice(
-        quantity,
-        productPriceElement.textContent,
-        totalPriceElement
-      );
+      updateTotalPrice(quantity, productPriceElement.textContent, totalPriceElement);
     });
   });
 }
@@ -123,7 +108,7 @@ function initProductPage() {
   const id = +localStorage.getItem("id") || 1;
   const products = JSON.parse(localStorage.getItem("products")) || [];
 
-  const product = products.find((item) => item.id === id);
+  const product = products.find(item => item.id === id);
 
   if (mainContent) {
     if (product) {
@@ -134,7 +119,7 @@ function initProductPage() {
             <h1 class="single__content_title">${product.title}</h1>
             <p class="single__content_description">Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный глянцевый блеск, четкие линии, красивые формы.</p>
             <p class="single__content_install">Подходит для установки на деревянную/межкомнатную дверь.</p>
-            <p class="single__content_price_text">Цена</p>
+            <p class="single__content_price_text">Подходит для установки на деревянную/межкомнатную дверь.</p>
             <div class="single__content_price_box">
               <p class="single__price__new_text">
                 <span class="price__new">${product.newPrice}</span> ₽
@@ -143,7 +128,7 @@ function initProductPage() {
                 <span class="price__old">${product.olPrice}</span> ₽
               </p>
             </div>
-            <button class="single__content_bassket" id="add-basket">КОРЗИНКА</button>
+            <button class="single__content_bassket" id="add-basket">КОРЗИНА</button>
           </div>
         </div>
       `;
@@ -155,7 +140,7 @@ function initProductPage() {
     } else {
       mainContent.innerHTML = "<p>Product not found.</p>";
     }
-  }
+  } 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
