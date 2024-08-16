@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Накладные электронные замки</title>
+    <link
+      class="title__img"
+      rel="icon"
+      href="./img/Logo-svg.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container">
+        <div class="header__top_block">
+          <p class="header__top_text">
+            Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09
+          </p>
+          <a class="header__top_link" href="./single.html">Обратный звонок</a>
+        </div>
+      </div>
+    </header>
+    <section class="navbar">
+      <div class="container">
+        <div class="nav__block">
+          <a class="logo__link" href="./index.html">
+            <img class="logo__img" src="./img/Logo-svg.svg" alt="" />
+          </a>
+          <div class="nav__link_box">
+            <a class="nav__link" href="#">Главная</a>
+            <select class="nav__select" name="katalog" id="nav-select">
+              <option class="nav__option" value="">Каталог</option>
+            </select>
+            <a class="nav__link" href="#">Оптовая продажа</a>
+            <a class="nav__link" href="#">О нас</a>
+          </div>
+          <div class="nav__icon_box">
+            <a class="nav__tel_link" href="tel:+79665588499"
+              ><img style="width: 20px" src="./img/tel-svg.svg" alt="" />
+              <p class="nav__tel">+7 (966) 55 88 499</p></a
+            >
+            <button class="favorite__btn"></button>
+            <a href="./basket.html" class="bassket__btn"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr style="margin: 0" />
+    <section class="content">
+      <div class="container">
+        <div class="content__top_link_box">
+          <a class="content__top_link" href="#">Главная</a>
+          <a class="content__top_link" href="#"> / Каталог</a>
+        </div>
+        <div class="content__block">
+          <h1 class="content__title">
+            Накладные электронные замки
+            <p class="content__title_text">
+              (<span class="content__title_span">(854)</span>)
+            </p>
+          </h1>
+          <div class="content__filter_delete_box">
+            <button class="content__filter_delete">Сбросить фильтры</button>
+            <button class="content__filter_delete2">
+              Электронные кодовые замки
+            </button>
+            <select
+              class="content__filter_delete3"
+              name="category"
+              id="category-select"
+              required
+            >
+              <option
+                class="content__filter_option"
+                value=""
+                disabled
+                selected
+                hidden
+              >
+                Категория
+              </option>
+              <option class="content__filter_option" value="Popular">
+                Популярные
+              </option>
+              <option class="content__filter_option" value="Chip">
+                Дешевый
+              </option>
+              <option class="content__filter_option" value="Expensive">
+                Дорогие
+              </option>
+              <option class="content__filter_option" value="Quality">
+                Качество
+              </option>
+            </select>
+          </div>
+          <div class="content__box">
+            <div class="content__filter_box">
+              <div class="content__main_filter_box">
+                <h3 class="content__filter_title">Фильтр</h3>
+                <button class="content__filter_select_btn1">
+                  Цена
+                  <img class="input__img" src="./img/select-bg.svg" alt="" />
+                </button>
+                <div class="price__filter__box">
+                  <input
+                    class="filter__input"
+                    type="number"
+                    placeholder="Минимум"
+                    maxlength="6"
+                  />
+                  <input
+                    class="filter__input"
+                    type="number"
+                    placeholder="Максимум"
+                    maxlength="6"
+                  />
+                </div>
+                <select class="content__filter_select" name="" id="">
+                  <option class="content__filter_option" value=" ">
+                    Особенности
+                  </option>
+                </select>
+                <select class="content__filter_select" name="" id="">
+                  <option class="content__filter_option" value=" ">Цвет</option>
+                </select>
+                <select class="content__filter_select" name="" id="">
+                  <option class="content__filter_option" value=" ">
+                    Материал
+                  </option>
+                </select>
+                <select class="content__filter_select" name="" id="">
+                  <option class="content__filter_option" value=" ">
+                    Размеры
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="content__product_box">
+              <template id="template">
+                <div class="content__list_block">
+                  <div class="content__img_box">
+                    <a href="./single.html">
+                      <img
+                        class="list__content_img"
+                        src="./img/product-1.png"
+                        alt="img"
+                      />
+                    </a>
+                    <p class="img__gift_text1">
+                      <img
+                        class="img__gift"
+                        src="./img/product-sale.svg"
+                        alt=""
+                      />
+                      В наличии
+                    </p>
+                    <p class="img__gift_text">
+                      <img src="./img/product-gift.svg" alt="" />Подарок
+                    </p>
+                    <h4 class="img__gift_title">SALE</h4>
+                  </div>
+                  <div class="content__info_box">
+                    <p class="product__star_text">
+                      <img src="./img/star-svg.svg" alt="" />(12) отзывов
+                    </p>
+                    <h3 class="product__title">
+                      Вариативный замок Golden Soft для отеля
+                    </h3>
+                    <div class="price__box">
+                      <p class="price__new_text">
+                        <span class="price__new">7 000</span> ₽
+                      </p>
+                      <p class="price__old_text">
+                        <span class="price__old">8 000</span> ₽
+                      </p>
+                      <button class="add__bassket" id="add-bassket"></button>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+          <div class="pagination">
+            <button
+              class="pagination__btn pagination__btn--prev"
+              aria-label="Previous page"
+            >
+              <img src="./img/pagination-left.svg" alt="" />
+            </button>
+            <div class="pagination__numbers">
+              <button class="pagination__number">1</button>
+              <button class="pagination__number">2</button>
+              <button class="pagination__number">3</button>
+              <button class="pagination__number">4</button>
+              <button class="pagination__number">5</button>
+            </div>
+            <button
+              class="pagination__btn pagination__btn--next"
+              aria-label="Next page"
+            >
+              <img src="./img/pagination-right.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="img__content">
+      <div class="container">
+        <div class="swiper">
+          <div class="slider__title_box">
+            <h1 class="slider__title">Вы недавно просмотрели</h1>
+            <div class="swiper__btn_box">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination" style="display: none"></div>
+        </div>
+      </div>
+    </section>
+    <section class="about__product">
+      <div class="container">
+        <div class="about__block">
+          <div class="about__box">
+            <div class="about__text_block">
+              <h2 class="about__title">
+                Eget quis quam metus, scelerisque.
+              </h2>
+              <p class="about__text">
+                Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam rhoncus.
+Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra interdum in leo. Nullam ullamcorper id enim fermentum integer praesent bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac dictumst mauris sed facilisis.
+              </p>
+            </div>
+            <img class="about__img" src="./img/about-img1.png" alt="">
+          </div>
+          <div class="about__box">
+            <img class="about__img" src="./img/about-img2.png" alt="">
+            <div class="about__text_block">
+              <h2 class="about__title">
+                Eget quis quam metus, scelerisque.
+              </h2>
+              <p class="about__text">
+                Odio felis sit leo, massa, mauris, at pulvinar ultrices. Eu porttitor molestie massa porttitor. Quisque at turpis ut proin eu et magna etiam rhoncus.
+Ac risus neque pulvinar tincidunt est. Tristique imperdiet viverra interdum in leo. Nullam ullamcorper id enim fermentum integer praesent bibendum. In ullamcorper purus scelerisque malesuada et egestas. Ac dictumst mauris sed facilisis.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Inputs__section">
+      <div class="container">
+        <div class="inputs__block">
+          <h1 class="inputs__title">
+            Мы Вам перезвоним
+          </h1>
+          <p class="inputs__text">
+            Если у вас возникли какие-то вопросы или проблемы, заполните форму и мы Вам перезвоним.
+          </p>
+          <div class="main__inpust_box">
+            <input class="main__input" type="text" placeholder="Ваше имя">
+            <input class="main__input" type="text" placeholder="Ваш Email">
+            <button class="input__btn">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__block">
+          <div class="footer__logo_box">
+            <img src="./img/Logo-svg.svg" alt="img">
+            <ul class="footer__list_icon">
+              <li class="icon__item"><img src="./img/v-kontakte.svg" alt="img"></li>
+              <li class="icon__item"><img src="./img/twitter.svg" alt="img"></li>
+              <li class="icon__item"><img src="./img/face-book.svg" alt="img"></li>
+            </ul>
+          </div>
+<div class="list__block">
+  <div class="footer__list_box">
+    <h4 class="footer__list_title">
+      Навигация
+    </h4>
+    <ul class="footer__list">
+      <li class="footer__list_item"><a class="footer__list_link" href="">Главная</a></li>
+      <li class="footer__list_item"><a class="footer__list_link" href="">Каталог</a></li>
+      <li class="footer__list_item"><a class="footer__list_link" href="">Оптовая продажа</a></li>
+      <li class="footer__list_item"><a class="footer__list_link" href="">О нас</a></li>
+    </ul>
+  </div>
+  <div class="footer__list_box">
+    <h4 class="footer__list_title">
+      Наши контакты
+    </h4>
+    <ul class="footer__list">
+     <li class="footer__list_item">
+      <span class="footer__list_span">Телефоны</span>
+      <a class="footer__list_link" href="tel:+79885650038">+7 (988) 565 00 38</a>
+      <a class="footer__list_link" href="tel:+375336628256">+375 33 662 82 56</a>
+     </li>
+     <li class="footer__list_item">
+      <span class="footer__list_span">Email</span>
+      <a class="footer__list_link" href="">vladpertcev@mail.ru</a>
+      <a class="footer__list_link" href="">korobko416@gmail.com</a>
+     </li>
+      
+    </ul>
+  </div>
+  <div class="footer__list_box">
+    <h4 class="footer__list_title">
+      Наш адрес
+    </h4>
+    <ul class="footer__list">
+      <li class="footer__list_item">
+       <a class="footer__list_link" href="">
+        Россия, Ростов-на-Дону ул. Богачева, 16
+       </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__list_box">
+    <h4 class="footer__list_title">
+      информация
+    </h4>
+    <ul class="footer__list">
+      <li class="footer__list_item"><a class="footer__list_link" href="#">Доставка и оплата</a></li>
+      <li class="footer__list_item"><a class="footer__list_link" href="#">Гарантии</a></li>
+      <li class="footer__list_item"><a class="footer__list_link" href="#">Возврат товара</a></li>
+    </ul>
+  </div>
+</div>
+        </div>
+      </div><hr style="border: 1px solid #fff; opacity: 0.08;">
+      <p class="footer__bottom_text">
+        © 2021 Golden Soft All rights reserved.
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/slider.js"></script>
+    <script type="module" src="./js/script.js"></script>
+    <script src="./js/drob-down.js"></script>
+  </body>
+</html>

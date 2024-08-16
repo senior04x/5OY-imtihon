@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Накладные электронные замки</title>
+    <link
+      class="title__img"
+      rel="icon"
+      href="./img/Logo-svg.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container">
+        <div class="header__top_block">
+          <p class="header__top_text">
+            Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09
+          </p>
+          <a class="header__top_link" href="#">Обратный звонок</a>
+        </div>
+      </div>
+    </header>
+    <section class="navbar">
+      <div class="container">
+        <div class="nav__block">
+          <a class="logo__link" href="./index.html">
+            <img class="logo__img" src="./img/Logo-svg.svg" alt="" />
+          </a>
+          <div class="nav__link_box">
+            <a class="nav__link" href="#">Главная</a>
+            <select class="nav__select" name="katalog" id="nav-select">
+              <option class="nav__option" value="">Каталог</option>
+            </select>
+            <a class="nav__link" href="#">Оптовая продажа</a>
+            <a class="nav__link" href="#">О нас</a>
+          </div>
+          <div class="nav__icon_box">
+            <a class="nav__tel_link" href="tel:+79665588499"
+              ><img style="width: 20px" src="./img/tel-svg.svg" alt="" />
+              <p class="nav__tel">+7 (966) 55 88 499</p></a
+            >
+            <button class="favorite__btn"></button>
+            <a href="./basket.html" class="bassket__btn"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr style="margin: 0" />
+    <div class="container">
+      <div class="main__box"></div>
+      <template id="template">
+        <div class="single__content_block">
+          <img
+            class="single__content_img"
+            id="single__content_img"
+            src="./img/product-1.png"
+            alt=""
+          />
+          <div class="single__content_box">
+            <h1 class="single__content_title">
+              Golden Soft GS-200Z-5 для офиса
+            </h1>
+            <p class="single__content_description">
+              Замок дверной электронный Golden Soft GS-200Z-5 имеет роскошный
+              глянцевый блеск, четкие линии, красивые формы.
+            </p>
+            <p class="single__content_install">
+              Подходит для установки на деревянную/межкомнатную дверь.
+            </p>
+            <p class="single__content_price_text">Цена</p>
+            <div class="single__content_price_box">
+              <p class="single__price__new_text">
+                <span class="price__new">7 000</span> ₽
+              </p>
+              <p class="single__price__old_text">
+                <span class="price__old">8 000</span> ₽
+              </p>
+            </div>
+            <button class="single__content_bassket" id="add-bassket">
+              КОРЗИНКА
+            </button>
+          </div>
+        </div>
+      </template>
+    </div>
+    <script type="module" src="./js/single.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="header__top">
+      <div class="container">
+        <div class="header__top_block">
+          <p class="header__top_text">
+            Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09
+          </p>
+          <a class="header__top_link" href="./single.html">Обратный звонок</a>
+        </div>
+      </div>
+    </header>
+    <section class="navbar">
+      <div class="container">
+        <div class="nav__block">
+          <a class="logo__link" href="./index.html">
+            <img class="logo__img" src="./img/Logo-svg.svg" alt="" />
+          </a>
+          <div class="nav__link_box">
+            <a class="nav__link" href="#">Главная</a>
+            <select class="nav__select" name="katalog" id="nav-select">
+              <option class="nav__option" value="">Каталог</option>
+            </select>
+            <a class="nav__link" href="#">Оптовая продажа</a>
+            <a class="nav__link" href="#">О нас</a>
+          </div>
+          <div class="nav__icon_box">
+            <a class="nav__tel_link" href="tel:+79665588499"
+              ><img style="width: 20px" src="./img/tel-svg.svg" alt="" />
+              <p class="nav__tel">+7 (966) 55 88 499</p></a
+            >
+            <button class="favorite__btn"></button>
+            <a href="./basket.html" class="bassket__btn"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr style="margin: 0" />
+    <div id="basket-container" class="basket__content_block container">
+      <div id="basket-items">
+        <div class="basket__card_box container">
+          <div class="title__basket_box">
+            <h2 class="basket__title">Корзина</h2>
+            <button class="close__button_basket">
+              <img src="./img/close-btn.svg" alt="img" />
+            </button>
+          </div>
+          <div class="basket__product_box">
+            <img class="basket__img" src="./img/product-1.png" alt="img" />
+            <div class="basket__product_title_box">
+              <h2 class="basket__product_title">
+                Дверной Замок Golden Soft для офиса
+              </h2>
+              <p class="basket__product__text">
+                + Подарок:
+                <a class="basket__product__link" href="#"
+                  >“Приложение к замкам Golden Service”</a
+                >
+              </p>
+              <div class="miqdor__box">
+                <button class="minus__button miqdor__btn">-</button>
+                <input class="miqdor__input" type="text" value="1" />
+                <button class="plus__button miqdor__btn">+</button>
+              </div>
+            </div>
+            <div class="basket__remove_btn">
+              <button
+                class="remove-from-basket"
+                data-id="${product.id}"
+              ></button>
+              <h3 class="basket__product_price">
+                <span class="basket__product_price">33000</span>₽
+              </h3>
+            </div>
+          </div>
+          <div class="product__finely_price_box">
+            <p class="product__finely_price_text">Итого:</p>
+            <h1 class="product__finely_price_title">
+              <span class="product__finely_price">66 000</span>₽
+            </h1>
+          </div>
+          <div class="zakaz__btn_box">
+            <button class="booking__btn1">Оформить заказ</button>
+            <button class="booking__btn2">Продолжить покупки</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/single.js"></script>
+  </body>
+</html>
