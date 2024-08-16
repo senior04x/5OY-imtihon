@@ -9,7 +9,7 @@ function addToBasket(productId) {
   if (productIndex !== -1) {
     products[productIndex].addBasket = true;
     localStorage.setItem("products", JSON.stringify(products));
-    alert('Added to basket');
+    alert('Добавить товар в корзину');
     displayBasket();
   }
 }
@@ -21,7 +21,7 @@ function removeFromBasket(productId) {
   if (productIndex !== -1) {
     products[productIndex].addBasket = false;
     localStorage.setItem("products", JSON.stringify(products));
-    alert('Removed from basket');
+    alert('Удалить товар из корзины');
     displayBasket();
   }
 }
