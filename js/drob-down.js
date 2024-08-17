@@ -10,17 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }else{
             inputImg.src = "./img/select-bg.svg"
         }
-       
-
-    });
-    dropdownToggle.addEventListener('click', function (event) {
-        if (!event.target.matches('.content__filter_select_btn1')) {
-            if (dropdownMenu.style.display === 'block') {
-                dropdownMenu.style.display = 'none';
-            }
-            
-        }
-        
     });
    
 });
